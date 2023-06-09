@@ -1,0 +1,51 @@
+<DOCTYPE html>
+<html>
+    <head>
+       <meta name="viewport" content="width=devide-width, intial-scaled=1.0">
+       <title></title>
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="left">
+                <div class="list" draggable="true">
+                    <img src="images/icon1.png"> Cheese Burger
+                </div>
+                <div class="list" draggable="true">
+                    <img src="images/icon2.png"> French Fries
+                </div>
+                <div class="list" draggable="true">
+                    <img src="images/icon3.png"> Pizza
+                </div>
+                <div class="list" draggable="true">
+                    <img src="images/icon4.png"> Ice Cream
+                </div>
+            </div>
+            <div id="right"></div>
+            <button id="reset">Reset</button>
+        </div>
+
+
+    <script>
+        let lists = document.getElementsByClassName("list");
+        let rightBox = document.getElementById("right");
+        let leftBox = document.getElementById("left");
+        const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => document.location.reload());
+
+        for(list of lists){
+            list.addEventListener("dragstart", function(e){ 
+                let selected = e.target;
+
+                rightBox.addEventListener("dragover", function(e){
+                    e.preventDefault();
+                });
+                rightBox.addEventListener("drop", function(e){
+                    rightBox.appendChild(selected);
+                    selected = null;
+                })
+            })
+        }
+    </script>
+    </body>
+</html>
