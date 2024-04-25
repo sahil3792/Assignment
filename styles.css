@@ -1,0 +1,46 @@
+* {
+    border: 0;
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Crimson Text", serif;
+}
+
+.background-image {
+    background-image: url(assets/backgroundImage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+.background-image h1{
+    text-align: center;
+    padding-top: 40vh;
+    color: #543A2A;
+    font-size: 70px;
+    font-weight: 700;
+    font-style: normal;
+    
+    
+}
+
+.background-image2 {
+    background-image: url(assets/backgroundImage2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    /* Make sure the container takes the full height of the viewport */
+     /* White color with 2% transparency */
+}
+
+.transparent-box {
+    margin:10%;
+    padding: 10%;
+    background-color: rgba(255, 255, 255, 0.432);
+}
